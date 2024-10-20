@@ -49,28 +49,38 @@
 
       /* Table Styling */
       .table {
-        background-color: #2c2c2c;
-        color: white;
-      }
+  background-color: #2c2c2c;
+  color: white;
+  border-collapse: collapse; 
+  width: 100%;
+}
 
-      .table thead th {
-        background-color: #121212;
-        border-bottom: 2px solid #00e1ff;
-        position: sticky;
-        top: 0;
-        z-index: 1;
-      }
+.table th,
+.table td {
+  border: 1px solid #00e1ff; 
+  padding: 8px;
+  text-align: center;
+}
 
-      .table tbody tr:hover {
-        background-color: rgba(0, 225, 255, 0.1);
-      }
+.table thead th {
+  background-color: #121212;
+  border-bottom: 2px solid #00e1ff;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
 
-      .table-wrapper {
-        max-height: 400px;
-        overflow-y: auto;
-        margin-top: 20px;
-        border: 1px solid #00e1ff;
-      }
+.table tbody tr:hover {
+  background-color: rgba(0, 225, 255, 0.1);
+}
+
+.table-wrapper {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-top: 20px;
+  border: 1px solid #00e1ff;
+}
+
 
       /* Scrollbar Styling */
       .table-wrapper::-webkit-scrollbar {
