@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Member</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      /* Global Styles */
+      body {
+        font-family: 'Rajdhani', sans-serif;
+        background-color: #1b1b1b;
+        color: white;
+      }
+
+      h2, label {
+        color: #f8f9fa;
+      }
+
+      .navbar {
+        background-color: #121212;
+        border-bottom: 2px solid #00e1ff;
+      }
+
+      .navbar-brand img {
+        border: 2px solid #00e1ff;
+      }
+
+      .container {
+        padding-top: 100px;
+      }
+
+      /* Table Styling */
+      .table {
+        background-color: #2c2c2c;
+        color: white;
+      }
+
+      .table thead th {
+        background-color: #121212;
+        border-bottom: 2px solid #00e1ff;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+      }
+
+      .table tbody tr:hover {
+        background-color: rgba(0, 225, 255, 0.1);
+      }
+
+      .table-wrapper {
+        max-height: 400px;
+        overflow-y: auto;
+        margin-top: 20px;
+        border: 1px solid #00e1ff;
+      }
+
+      /* Scrollbar Styling */
+      .table-wrapper::-webkit-scrollbar {
+        width: 12px;
+      }
+
+      .table-wrapper::-webkit-scrollbar-thumb {
+        background-color: #00e1ff;
+        border-radius: 6px;
+      }
+
+      .table-wrapper::-webkit-scrollbar-track {
+        background-color: #121212;
+      }
+
+      /* Footer Styling */
+      footer {
+        background-color: #121212;
+        color: #f8f9fa;
+        padding: 20px 0;
+        text-align: center;
+        border-top: 2px solid #00e1ff;
+        margin-top: 50px;
+      }
+
+      footer a {
+        color: #00e1ff;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+
+      footer a:hover {
+        color: #00b0cc;
+      }
+
+      
+
+      /* Button Styling */
+      .btn-dark {
+        background-color: #00e1ff;
+        border: none;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn-dark:hover {
+        background-color: #00b0cc;
+        color: #ffffff;
+      }
+
+      
+
+    </style>
+  </head>
+  <body>
+    <nav class="navbar fixed-top border bg-dark">
+      <div class="container-fluid">
+        <div class="w-100 d-flex align-items-center justify-content-between">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="assets/killua_nav.jpg"
+              alt="Logo"
+              width="40"
+              height="40"
+              class="me-2 rounded-circle"
+            />
+            <span class="text-white">Killua Zoldyck</span>
+          </a>
+          <div class="d-flex">
+            <a
+              href="member.html"
+              class="text-white mx-2"
+              style="text-decoration: none"
+              >Member Kami</a
+            >
+            <a
+              href="formulir.html"
+              class="text-white mx-2"
+              style="text-decoration: none"
+              >Pendaftaran</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container" style="padding-top: 70px">
+      <h2 class="my-5">Data Member</h2>
+      <div class="table-wrapper">
+        <table class="table table-dark table-striped">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Nama Member</th>
+              <th>Tanggal Bergabung</th>
+              <th>Rank Keanggotaan</th>
+              <th>Alasan Menyukai Killua</th>
+            </tr>
+          </thead>
+          <tbody>
+            <script>
+              const members = [
+                { name: "Thunder Assassin", date: "01 Januari 2020", rank: "Assassin", reason: "Kagum dengan kecepatannya" },
+                { name: "Lightning Fang", date: "15 Februari 2019", rank: "Elite Hunter", reason: "Mengagumi kecerdasan taktiknya" },
+                { name: "Shadow Blitz", date: "23 Maret 2021", rank: "Rookie Hunter", reason: "Terpesona dengan masa lalunya" },
+                { name: "Zoldyck Fanboy", date: "08 April 2018", rank: "Family Loyalist", reason: "Terinspirasi oleh keluarga Zoldyck" },
+                { name: "Godspeed Nova", date: "17 Mei 2020", rank: "Nen Apprentice", reason: "Sangat suka kekuatan Godspeed-nya" },
+                { name: "Phantom Dark", date: "30 Juni 2019", rank: "Veteran Hunter", reason: "Menghargai keahlian bertarungnya" },
+                { name: "Silent Thunder", date: "05 Juli 2021", rank: "Prodigy Hunter", reason: "Menyukai sikap dingin dan taktisnya" },
+                { name: "Bane of Killua", date: "19 Agustus 2020", rank: "Hunter Elite", reason: "Tertarik dengan latar belakangnya" },
+                { name: "Electric Blade", date: "29 September 2018", rank: "Nen Master", reason: "Kekaguman terhadap kontrol Nen listriknya" },
+                { name: "White Thunder", date: "12 Oktober 2019", rank: "Rookie Assassin", reason: "Terpesona dengan kemampuan menyerangnya" },
+                { name: "Shadow Killer", date: "22 November 2019", rank: "Silent Hunter", reason: "Kagum dengan keterampilan penyamarannya" },
+                { name: "Phantom Lightning", date: "03 Desember 2017", rank: "Master Assassin", reason: "Suka gaya bertarung Killua" },
+                { name: "Zoldyck Guardian", date: "14 Januari 2021", rank: "Family Protector", reason: "Suka dedikasinya pada keluarga" },
+                { name: "Killua Seeker", date: "07 Februari 2019", rank: "Rookie Hunter", reason: "Menyukai kepintarannya" },
+                { name: "Silver Flash", date: "21 Maret 2020", rank: "Nen Prodigy", reason: "Terinspirasi oleh kekuatan listrik Killua" },
+                { name: "Dark Assassin", date: "15 April 2018", rank: "Elite Assassin", reason: "Menyukai kecepatan dan kelincahannya" },
+                { name: "Godspeed Runner", date: "06 Mei 2021", rank: "Nen Master", reason: "Tertarik dengan kecepatannya" },
+                { name: "Zoldyck Loyalist", date: "28 Juni 2019", rank: "Family Loyalist", reason: "Terinspirasi oleh latar belakang keluarganya" },
+                { name: "Electric Assassin", date: "10 Juli 2020", rank: "Master Assassin", reason: "Kagum dengan serangan listriknya" },
+                { name: "Phantom Runner", date: "02 Agustus 2021", rank: "Rookie Hunter", reason: "Menyukai gaya diam-diamnya" },
+                { name: "Killua's Blade", date: "12 September 2019", rank: "Elite Assassin", reason: "Terpesona dengan kemampuan pisau Killua" },
+                { name: "Electric Phantom", date: "25 Oktober 2018", rank: "Nen Apprentice", reason: "Suka gerakan diam-diamnya" },
+                { name: "Dark Thunder", date: "30 November 2020", rank: "Elite Hunter", reason: "Kagum dengan keterampilan penyamarannya" },
+                { name: "Zoldyck Strike", date: "19 Desember 2017", rank: "Nen Apprentice", reason: "Menyukai kecepatan reflex-nya" },
+                { name: "Thunder Strike", date: "05 Januari 2020", rank: "Nen Master", reason: "Terinspirasi oleh kekuatannya" },
+                { name: "Silent Reaper", date: "17 Februari 2021", rank: "Rookie Hunter", reason: "Menyukai gaya bertarung tenangnya" },
+                { name: "Lightning Storm", date: "08 Maret 2019", rank: "Assassin", reason: "Tertarik dengan teknik serangan listriknya" },
+                { name: "White Assassin", date: "15 April 2020", rank: "Nen Apprentice", reason: "Terpesona dengan kemampuan penyamarannya" },
+                { name: "Killua Devotee", date: "02 Mei 2021", rank: "Prodigy Hunter", reason: "Suka strategi bertarungnya" },
+                { name: "Speed Demon", date: "25 Juni 2018", rank: "Elite Assassin", reason: "Menyukai kemampuan Godspeed-nya" },
+                { name: "Phantom Flash", date: "16 Juli 2019", rank: "Master Hunter", reason: "Mengagumi kemampuan menyamar dan bertarung" },
+                { name: "Electric Ghost", date: "29 Agustus 2020", rank: "Rookie Assassin", reason: "Terpesona dengan kekuatan listriknya" },
+                { name: "Godspeed Killer", date: "03 September 2019", rank: "Nen Prodigy", reason: "Menghargai taktik cerdasnya" },
+                { name: "Silent Shadow", date: "14 Oktober 2021", rank: "Master Assassin", reason: "Tertarik dengan gerak-gerik senyapnya" },
+                { name: "Zoldyck Thunder", date: "09 November 2020", rank: "Elite Hunter", reason: "Terinspirasi oleh kekuatan dan kecepatannya" },
+                { name: "Phantom Blade", date: "19 Desember 2018", rank: "Prodigy Hunter", reason: "Menyukai ketepatan serangannya" },
+                { name: "Thunder Flash", date: "22 Januari 2019", rank: "Assassin Elite", reason: "Mengagumi kecepatannya yang luar biasa" },
+                { name: "Silent Lightning", date: "05 Februari 2020", rank: "Master Assassin", reason: "Tertarik dengan gaya bertarung gelapnya" },
+                { name: "Zoldyck Phantom", date: "27 Maret 2021", rank: "Nen Master", reason: "Menghargai keahliannya sebagai pembunuh" },
+                { name: "White Ghost", date: "10 April 2019", rank: "Assassin Apprentice", reason: "Suka keterampilan penyamarannya" },
+                { name: "Thunder Hunter", date: "22 Mei 2021", rank: "Rookie Hunter", reason: "Terinspirasi oleh Godspeed-nya" },
+                { name: "Electric Shadow", date: "19 Juni 2020", rank: "Elite Assassin", reason: "Kagum dengan kekuatan listriknya" },
+                { name: "Silent Thunderbolt", date: "07 Juli 2019", rank: "Master Assassin", reason: "Menyukai gaya bertarung sunyi" },
+                { name: "Zoldyck Slayer", date: "14 Agustus 2020", rank: "Nen Prodigy", reason: "Mengagumi kecerdasannya dalam pertarungan" },
+                { name: "Lightning Reaper", date: "27 September 2021", rank: "Assassin Master", reason: "Terpesona dengan kecepatan mematikannya" },
+                { name: "Godspeed Phantom", date: "11 Oktober 2018", rank: "Nen Apprentice", reason: "Suka ketepatannya dalam menyerang" },
+                { name: "Dark Lightning", date: "09 November 2019", rank: "Prodigy Hunter", reason: "Menghargai kekuatan listriknya" },
+                { name: "Silent Assassin", date: "04 Desember 2020", rank: "Rookie Assassin", reason: "Terpesona dengan kemampuan stealth-nya" },
+                { name: "Phantom Nova", date: "12 Januari 2021", rank: "Nen Master", reason: "Menyukai kecepatannya yang tak terkalahkan" },
+                { name: "Thunder Warrior", date: "26 Februari 2019", rank: "Veteran Hunter", reason: "Mengagumi kecepatan dan ketepatannya" }
+              ];
+
+              members.forEach((member, index) => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                  <td>${index + 1}</td>
+                  <td>${member.name}</td>
+                  <td>${member.date}</td>
+                  <td>${member.rank}</td>
+                  <td>${member.reason}</td>
+                `;
+                document.querySelector("tbody").appendChild(row);
+              });
+            </script>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Killua Zoldyck Fanbase | All Rights Reserved</p>
+      <p>
+        Follow us on:
+        <a href="https://facebook.com"><i class="bi bi-facebook"></i></a>
+        <a href="https://x.com"><i class="bi bi-x"></i></a>
+        <a href="https://instagram.com"><i class="bi bi-instagram"></i></a>
+      </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulir Pendaftaran Member</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      /* Global Styles */
+      body {
+        font-family: 'Rajdhani', sans-serif;
+        background-color: #1b1b1b;
+        color: white;
+      }
+
+      h2, label {
+        color: #f8f9fa;
+      }
+
+      .navbar {
+        background-color: #121212;
+        border-bottom: 2px solid #00e1ff;
+      }
+
+      .navbar-brand img {
+        border: 2px solid #00e1ff;
+      }
+
+      .container {
+        padding-top: 100px;
+      }
+
+      /* Card Styling */
+      .card {
+        background-color: #2c2c2c;
+        border: none;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+      }
+
+      .card-header {
+        background-color: #121212;
+        border-bottom: 3px solid #00e1ff;
+      }
+
+      /* Input Fields */
+      .form-control, .form-select {
+        background-color: #1b1b1b;
+        border: 1px solid #00e1ff;
+        color: white;
+      }
+
+      .form-control:focus, .form-select:focus {
+        border-color: #00e1ff;
+        box-shadow: 0 0 5px rgba(0, 225, 255, 0.8);
+      }
+
+      textarea.form-control {
+        resize: none;
+      }
+
+      /* Form Label */
+      .form-label {
+        font-weight: bold;
+        color: #00e1ff;
+      }
+
+      /* Checkbox and Radio */
+      .form-check-input:checked {
+        background-color: #00e1ff;
+        border-color: #00e1ff;
+      }
+
+      .form-check-label {
+        color: #f8f9fa;
+      }
+
+      /* Button Styling */
+      .btn-dark {
+        background-color: #00e1ff;
+        border: none;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn-dark:hover {
+        background-color: #00b0cc;
+        color: #ffffff;
+      }
+
+      /* Hover effect for links */
+      a {
+        color: #00e1ff;
+        transition: color 0.3s ease;
+      }
+
+      a:hover {
+        color: #00b0cc;
+      }
+
+      /* Input Placeholder Color */
+      ::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      /* Footer Styling */
+      footer {
+        background-color: #121212;
+        color: #f8f9fa;
+        padding: 20px 0;
+        text-align: center;
+        border-top: 2px solid #00e1ff;
+        margin-top: 50px;
+      }
+
+      footer a {
+        color: #00e1ff;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+
+      footer a:hover {
+        color: #00b0cc;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar fixed-top border bg-dark">
+      <div class="container-fluid">
+        <div class="w-100 d-flex align-items-center justify-content-between">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="assets/killua_nav.jpg"
+              alt="Logo"
+              width="40"
+              height="40"
+              class="me-2 rounded-circle"
+            />
+            <span class="text-white">Killua Zoldyck</span>
+          </a>
+          <div class="d-flex">
+            <a
+              href="member.html"
+              class="text-white mx-2"
+              style="text-decoration: none"
+              >Member Kami</a
+            >
+            <a
+              href="formulir.html"
+              class="text-white mx-2"
+              style="text-decoration: none"
+              >Pendaftaran</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="card text-dark my-5">
+        <div class="card-header bg-dark text-white">
+          <h2 class="mb-0">Formulir Pendaftaran Member</h2>
+        </div>
+        <div class="card-body">
+          <form action="/submit-form" method="GET">
+            <!-- Field 1: Nama Member -->
+            <div class="mb-3">
+              <label for="name" class="form-label">Nama Member:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="form-control"
+                placeholder="Masukkan nama member"
+                required
+              />
+            </div>
+
+            <!-- Field 2: Tanggal Bergabung -->
+            <div class="mb-3">
+              <label for="join-date" class="form-label">Tanggal Bergabung:</label>
+              <input
+                type="date"
+                id="join-date"
+                name="join-date"
+                class="form-control"
+                required
+              />
+            </div>
+
+            <!-- Field 3: Rank Keanggotaan -->
+            <div class="mb-3">
+              <label for="rank" class="form-label">Rank Keanggotaan:</label>
+              <select id="rank" name="rank" class="form-select" required>
+                <option value="" selected disabled>Pilih rank keanggotaan</option>
+                <option value="Rookie Hunter">Rookie Hunter</option>
+                <option value="Prodigy Hunter">Prodigy Hunter</option>
+                <option value="Elite Hunter">Elite Hunter</option>
+                <option value="Nen Apprentice">Nen Apprentice</option>
+                <option value="Nen Master">Nen Master</option>
+                <option value="Assassin">Assassin</option>
+                <option value="Master Assassin">Master Assassin</option>
+                <option value="Veteran Hunter">Veteran Hunter</option>
+              </select>
+            </div>
+
+            <!-- Field 4: Alasan Menyukai Killua -->
+            <div class="mb-3">
+              <label for="reason" class="form-label">Alasan Menyukai Killua:</label>
+              <textarea
+                id="reason"
+                name="reason"
+                class="form-control"
+                rows="3"
+                placeholder="Ceritakan mengapa Anda menyukai Killua"
+                required
+              ></textarea>
+            </div>
+
+            <!-- Tombol Submit -->
+            <button type="submit" class="btn btn-dark px-4">Kirim</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Killua Zoldyck Fanbase | All Rights Reserved</p>
+      <p>
+        Follow us on:
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-x"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+      </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

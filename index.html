@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Killua Zoldyck</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      /* Global Styles */
+      body {
+        font-family: 'Rajdhani', sans-serif;
+        background-color: #1b1b1b;
+        color: white;
+      }
+
+      h1, h2, label {
+        color: #f8f9fa;
+      }
+
+      .navbar {
+        background-color: #121212;
+        border-bottom: 2px solid #00e1ff;
+      }
+
+      .navbar-brand img {
+        border: 2px solid #00e1ff;
+      }
+
+      .container {
+        padding-top: 100px;
+      }
+
+      .table {
+        background-color: #2c2c2c;
+        border-color: #00e1ff;
+        color: white;
+      }
+
+      .table thead th {
+        background-color: #121212;
+        border-bottom: 2px solid #00e1ff;
+      }
+
+      .table tbody tr:hover {
+        background-color: rgba(0, 225, 255, 0.1);
+      }
+
+      /* Sidebar Navigation */
+      .sidebar {
+        background-color: #1b1b1b;
+        height: 100%;
+        border-right: 2px solid #00e1ff;
+      }
+
+      .sidebar .nav-link {
+        color: white;
+        padding: 10px;
+      }
+
+      .sidebar .nav-link:hover {
+        background-color: rgba(0, 225, 255, 0.1);
+      }
+
+      .border {
+        border-color: #00e1ff !important;
+      }
+
+      /* Footer Styling */
+      footer {
+        background-color: #121212;
+        color: #f8f9fa;
+        padding: 20px 0;
+        text-align: center;
+        border-top: 2px solid #00e1ff;
+        margin-top: 50px;
+      }
+
+      footer a {
+        color: #00e1ff;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+
+      footer a:hover {
+        color: #00b0cc;
+      }
+
+      /* Button Styling */
+      .btn-dark {
+        background-color: #00e1ff;
+        border: none;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn-dark:hover {
+        background-color: #00b0cc;
+        color: #ffffff;
+      }
+
+      /* Smooth scroll for links */
+      a {
+        color: #00e1ff;
+        transition: color 0.3s ease;
+      }
+
+      a:hover {
+        color: #00b0cc;
+      }
+
+      .scrollable-list {
+        max-height: 300px;
+        overflow-y: auto;
+      }
+
+    </style>
+  </head>
+  <body>
+    <nav class="navbar fixed-top border bg-dark">
+        <div class="container-fluid">
+            <div class="w-100 d-flex align-items-center justify-content-between">
+                
+                <a class="navbar-brand" href="#" data-target="sidebar">
+                    <img src="assets/killua_nav.jpg" alt="Logo" width="40" height="40" class="me-2 rounded-circle">
+            <span class="text-white">Killua Zoldyck</span>
+
+                  </a>
+                  <div class="d-flex">
+                    <a
+                      href="member.html"
+                      class="text-white mx-2"
+                      style="text-decoration: none"
+                      >Member Kami</a
+                    >
+                    <a
+                      href="formulir.html"
+                      class="text-white mx-2"
+                      style="text-decoration: none"
+                      >Pendaftaran</a
+                    >
+                  </div>
+            </div>
+        </div>
+      </nav>
+      
+    <div class="container-fluid" style="padding-top: 70px;">
+      <div class="row mb-4">
+        <div class="col-md-2 border order-2 order-md-1">
+          <div class="sidebar d-flex flex-column p-3" id="sidebar">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a class="nav-link" href="#" data-target="penampilan">
+                    <i class="bi bi-eye"></i> Penampilan
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" data-target="pribadian">
+                    <i class="bi bi-emoji-smile"></i> Kepribadian
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" data-target="latar_belakang">
+                    <i class="bi bi-journal-text"></i> Latar Belakang
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" data-target="references">
+                    <i class="bi bi-book"></i> References
+                  </a>
+                </li>
+              </ul>              
+          </div>
+        </div>
+        <div class="col-md-7 border order-1 order-md-2 p-3 ">
+          <h1>Killua Zoldyck</h1>
+          <p>
+            Killua Zoldyck (キルア=ゾルディック, Kirua Zorudikku) adalah
+            karakter utama dalam serial Hunter x Hunter karya Yoshihiro Togashi.
+            Ia berasal dari keluarga Zoldyck, klan legendaris yang dikenal
+            sebagai pembunuh bayaran paling berbahaya di dunia. Dari kecil,
+            Killua dididik untuk menjadi pembunuh tanpa emosi dengan kekuatan
+            dan keterampilan yang luar biasa. Namun, ia memiliki jiwa
+            pemberontak dan memilih untuk meninggalkan keluarganya demi mencari
+            kebebasan dan makna hidup di luar bayang-bayang profesi keluarganya.
+            Keputusan ini menjadi awal dari petualangannya yang penuh tantangan.
+          </p>
+          <p>
+            Persahabatan Killua dengan Gon Freecss menjadi bagian penting dari
+            perjalanan hidupnya. Di balik sikapnya yang ceria dan usil, Killua
+            sangat peduli dan setia pada Gon, bahkan rela menghadapi bahaya demi
+            melindungi sahabatnya. Hubungan mereka membantu Killua untuk
+            melepaskan trauma masa lalu dan mengembangkan rasa percaya diri.
+            Namun, di sisi lain, masa lalunya sebagai pembunuh kerap
+            menghantuinya, membuatnya terjebak antara insting melawan dan
+            keinginannya untuk hidup normal.
+          </p>
+          <p>
+            Selain keterampilan fisik yang hebat, Killua memiliki kemampuan Nen
+            dan teknik listrik andal bernama Godspeed, yang membuatnya sangat
+            cepat dan mematikan. Meskipun terbiasa dengan kekerasan,
+            perkembangan emosionalnya terlihat jelas sepanjang cerita. Ia
+            belajar bahwa kekuatan bukanlah segalanya, dan kebahagiaan sejati
+            bisa ditemukan melalui hubungan yang tulus. Kompleksitas
+            kepribadiannya menjadikan Killua salah satu karakter paling menarik
+            dan dicintai oleh para penggemar.
+          </p>
+          <p>
+            Salah satu hal yang membuat Killua menarik adalah perjuangannya melawan
+            dirinya sendiri. Meskipun terlatih untuk tidak memiliki rasa takut atau
+            rasa bersalah, Killua secara bertahap membuka dirinya terhadap perasaan 
+            tersebut, terutama saat berinteraksi dengan Gon dan teman-teman mereka. 
+            Ini membuatnya lebih dari sekadar pembunuh berbakat, tetapi juga seorang 
+            anak muda yang mencari identitasnya di dunia yang penuh bahaya.
+          </p>
+          <p>
+            Dengan segala kompleksitasnya, Killua tetap menjadi karakter favorit 
+            penggemar, tidak hanya karena keterampilan tempurnya yang hebat, 
+            tetapi juga karena sisi kemanusiaannya yang dalam, perjuangannya untuk
+             menyeimbangkan kekuatan dan perasaannya, serta transformasinya dari 
+             seorang pembunuh menjadi sahabat setia yang rela melakukan apa pun untuk 
+             melindungi orang-orang yang ia sayangi.
+          </p>
+        </div>
+        <div class="col-md-3 border order-3 p-3">
+          <table class="table border">
+            <thead>
+              <tr>
+                <th scope="col" colspan="2" class="text-center">
+                  <img
+                    src="assets/Killua-2011.jpg"
+                    class="w-50"
+                    alt="Killua Image"
+                  />
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th colspan="2" class="text-center table-dark">Killua Zoldyck</td>
+              </tr>
+              <tr>
+                <th class="table-secondary">Kana</th>
+                <td>キルア=ゾルディック</td>
+              </tr>
+              <tr>
+                <th class="table-secondary">Rōmaji</th>
+                <td>Kirua Zorudikku</td>
+              </tr>
+              <tr>
+                <th colspan="2" class="text-center table-dark">Profil</th>
+              </tr>
+              <tr>
+                <th class="table-secondary">Kelamin</th>
+                <td>Laki-laki</td>
+              </tr>
+              <tr>
+                <th class="table-secondary">Umur</th>
+                <td>
+                  12 (Awal) <br />
+                  14 (Sekarang)
+                </td>
+              </tr>
+              <tr>
+                <th class="table-secondary">Tinggi</th>
+                <td>158 cm; 5'2"</td>
+              </tr>
+              <tr>
+                <th class="table-secondary">Berat</th>
+                <td>49 kg; 107.8 lbs</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Section: Penampilan -->
+      <h2 class="pt-4" id="penampilan">Penampilan</h2>
+      <hr />
+      <span>2011 | 1999 | Manga</span>
+      <div class="d-flex my-3">
+        <img
+          src="assets/Killua_Design.jpg"
+          class="me-3 img-fluid"
+          style="max-height: 100px; max-width: 200px;"
+          alt="Killua Design"
+        />
+        <p>
+          Killua memiliki rambut lebat perak, kulit yang sangat terang dan mata
+          biru. Perubahan Matanya tergantung pada suasana hatinya berada,
+          penyempitan dan mengasah ketika ia masuk ke mode pembunuh. Dalam anime
+          adaptasi Nippon Animation, warna mata Killua berubah menjadi hijau
+          selama OVA. Dia juga sering terlihat memegang skateboard hijau (berubah
+          menjadi kuning dalam seri 2011).
+        </p>
+      </div>
+      <p>
+        Killua biasanya memakai pakaian longgar, dengan pakaian biasa yang terdiri
+        dari kemeja lengan panjang berwarna gelap. Sebagian besar dari pakaiannya
+        memiliki turtleneck. Killua memakai celana panjang, celana pendek longgar
+        dalam manga dan diadaptasi animasi Madhouse, tapi desain karakter Nippon
+        Animation dipersingkat mereka untuk mencapai di atas lututnya. Killua juga
+        memakai sepatu biru dan putih, digambarkan berwarna coklat dan hitam dalam
+        adaptasi Nippon Animation.
+      </p>
+
+      <!-- Section: Kepribadian -->
+      <h2 class="pt-4" id="pribadian">Kepribadian</h2>
+      <hr />
+      <p>
+        Awalnya, Killua diperkenalkan sebagai karakter yang tampaknya mirip dengan
+        Gon tetapi berbeda pada saat yang sama; berwajah tebal, ceria, dan penuh
+        ide-ide nakal. Ia juga salah satu karakter pemikiran-tercepat dalam seri.
+        Ia yakin dengan kemampuan sendiri, sering menjadi rendah hati tentang hal
+        itu; tetapi ketika seseorang memuji dirinya, terutama Gon, ia mendapat
+        malu mudah. Killua juga dikenal karena memiliki gigi manis, karena dia
+        menghabiskan hampir 200 juta Jenny pada makanan ringan ketika ia berada di
+        Arena Surga. Camilan favoritnya adalah cokelat, khususnya Chocolate Balls.
+      </p>
+      <p>
+        Namun, kekejaman dan bakat dalam membunuh menunjukkan sisi lain dari
+        dirinya - yang mematikan, keras, dan haus darah. Setelah disiksa sejak
+        lahir, Killua telah dikondisikan untuk memiliki toleransi ekstrim untuk
+        racun, listrik dan nyeri. Killua memiliki kelincahan yang luar biasa dan
+        kekuatan yang membuatnya menjadi one-man mesin pembunuh - pasti tidak
+        satupun yang bisa dianggap enteng.
+      </p>
+      <p>
+        Bertentangan dengan predisposal Killua untuk membunuh adalah loyalitas
+        pantang menyerah kepada teman-temannya dan kebaikan alam. Killua sering
+        menderita sangat dalam upayanya untuk membantu teman-temannya tanpa
+        keluhan. Dia menempatkan orang lain sebelum dirinya sendiri tanpa peduli
+        kesehatan sendiri atau bahkan hidupnya.
+      </p>
+      <p>
+        Sampai saat ini, cacat terbesar Killua adalah rasa takutnya orang-orang
+        yang tampaknya lebih kuat dari dia (salah satunya kakaknya, Illumi). Killua
+        telah dilatih sebagai pembunuh oleh keluarganya untuk menjadi seseorang
+        yang berhati-hati bahwa ia harus ikut dalam pertempuran apabila kemenangan
+        mutlak terlihat jelas. Hal ini menghambat dia sebagai Hunter. Biscuit
+        menyatakan lebih dari sekali kemenangan yang tidak pernah pasti, dan
+        tergantung pada keadaan, seseorang memiliki potensi untuk mengalahkan
+        lawan yang lebih kuat.
+      </p>
+
+      <!-- Section: Latar Belakang -->
+      <h2 class="pt-4" id="latar_belakang">Latar Belakang</h2>
+      <hr />
+      <p>
+        Killua lahir sebagai anak tengah dari keluarga pembunuh diketahui, Keluarga
+        Zoldyck. Menampilkan janji besar sejak lahir, Killua telah menguasai banyak
+        teknik membunuh pada usia tersebut, dan ditetapkan untuk menjadi salah satu
+        pembunuh keluarga terbaik yang pernah diproduksi. Pada usia tiga tahun, ia
+        mulai pelatihan pada membuntuti orang lain. Ia terpaksa bertarung di Arena
+        Surga turnamen seni bela diri pada usia dari 6, di mana ia butuh dua tahun
+        untuk sampai ke lantai 199 (meskipun ia diterima ke lantai ke-200, ia
+        diundurkan diri oleh Ibunya). Killua memberitahu bahwa sejak lahir, ia telah
+        berlatih sepenuhnya untuk sebagai seorang pembunuh profesional. Killua
+        telah bertahun-tahun berusaha untuk mencoba teknik unik sempurna yang
+        dilakukan dan dimiliki olah pembunuh lainnya.
+      </p>
+      <p>
+        Bosan dan lelah membunuh, Killua tiba-tiba memberontak terhadap keluarganya, 
+        melukai kedua nya ibu dan kakak kedua. Dan lari dari rumah untuk ikut Ujian 
+        Hunter untuk bersenang-senang[7] Ia bertemu Gon selama bagian pertama dari 
+        Ujian Hunter dan mereka menjadi yang terbaik dari teman-teman. Dia pikir 
+        bersama-sama dengan Gon, menjadi menarik dan merasakan petualang.
+      </p>
+      <!-- Section: References -->
+      <h2 class="pt-4" id="references">References</h2>
+      <hr />
+      <ol class="border py-3 px-5 scrollable-list">
+        <li>Hunter × Hunter - Volume 21, Bab 210</li>
+        <li>Hunter × Hunter - Volume 21, Bab 210</li>
+        <li>Hunter × Hunter - Volume 21, Bab 214</li>
+        <li>Hunter × Hunter - Volume 21, Bab 219</li>
+        <li>Hunter × Hunter - Volume 10, Bab 90</li>
+        <li>Hunter × Hunter - Volume 5, Bab 44</li>
+        <li>Hunter × Hunter - Volume 2, Bab 13</li>
+        <li>Hunter × Hunter - Volume 1, Bab 6</li>
+        <li>Hunter × Hunter - Volume 2, Bab 10</li>
+        <li>Hunter × Hunter - Volume 2, Bab 11</li>
+        <li>Hunter × Hunter - Volume 2, Bab 12</li>
+        <li>Hunter × Hunter - Volume 2, Bab 13</li>
+        <li>Hunter × Hunter - Volume 2, Bab 14</li>
+        <li>Hunter × Hunter - Volume 2, Bab 14</li>
+        <li>Hunter × Hunter - Volume 2, Bab 15</li>
+        <li>Hunter × Hunter - Volume 2, Bab 16</li>
+        <li>Hunter × Hunter - Volume 2, Bab 17</li>
+        <li>Hunter × Hunter - Volume 2, Bab 17</li>
+        <li>Hunter × Hunter - Volume 3, Bab 18</li>
+        <li>Hunter × Hunter - Volume 3, Bab 20</li>
+        <li>Hunter × Hunter - Volume 3, Bab 21</li>
+        <li>Hunter × Hunter - Volume 3, Bab 21</li>
+        <li>Hunter × Hunter - Volume 3, Bab 22</li>
+        <li>Hunter × Hunter - Volume 3, Bab 23</li>
+        <li>Hunter × Hunter - Volume 4, Bab 29</li>
+        <li>Hunter × Hunter - Volume 4, Bab 32</li>
+        <li>Hunter × Hunter - Volume 4, Bab 33</li>
+        <li>Hunter × Hunter - Volume 4, Bab 34</li>
+        <li>Hunter × Hunter - Volume 4, Bab 35</li>
+        <li>Hunter × Hunter - Volume 5, Bab 36</li>
+        <li>Hunter × Hunter - Volume 5, Bab 36</li>
+      </ol>
+
+      <!-- Footer -->
+      <footer>
+        <p>&copy; 2024 Killua Zoldyck Fanbase | All Rights Reserved</p>
+        <p>
+          Follow us on:
+          <a href="https://facebook.com"><i class="bi bi-facebook"></i></a>
+          <a href="https://x.com"><i class="bi bi-x"></i></a>
+          <a href="https://instagram.com"><i class="bi bi-instagram"></i></a>
+        </p>
+      </footer>
+
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault(); // Mencegah perilaku default tautan
+                const targetId = this.getAttribute('data-target'); // Ambil ID target
+                const targetElement = document.getElementById(targetId); // Ambil elemen target
+
+                // Hitung posisi scroll yang diinginkan
+                const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - 70;
+
+                // Scroll ke posisi yang diinginkan
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth' // Tambahkan efek smooth scroll
+                });
+            });
+        });
+        document.querySelectorAll('.navbar-brand').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault(); // Mencegah perilaku default tautan
+                const targetId = this.getAttribute('data-target'); // Ambil ID target
+                const targetElement = document.getElementById(targetId); // Ambil elemen target
+
+                // Hitung posisi scroll yang diinginkan
+                const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - 60;
+
+                // Scroll ke posisi yang diinginkan
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth' // Tambahkan efek smooth scroll
+                });
+            });
+        });
+    </script>
+  </body>
+</html>
